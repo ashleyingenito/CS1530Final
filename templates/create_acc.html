@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Account</title>
+</head>
+<body>
+    <h1>Create Your Account</h1>
+    <form action="{{ url_for('create_account') }}" method="post">
+        First Name: <input type="text" name="first_name"><br>
+        Last Name: <input type="text" name="last_name"><br>
+        Email: <input type="email" name="email"><br>
+        Phone Number: <input type="tel" name="phone_number"><br>
+        Username: <input type="text" name="username" required><br>
+        Password: <input type="password" name="password" required><br>
+        <input type="submit" value="Create">
+    </form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+    <h1> Hey, {{ user.first_name }}!</h1>
+     <!-- Link/button to take the user to the assessment page -->
+     <h2><a href="{{ url_for('assessment_page') }}">Take Our Assessment</a></h2>
+
+     <!-- Link/button to take the user to the challenges page -->
+     <h2><a href="{{ url_for('challenges_page') }}">Go To Challenges</a></h2>
+
+
+    <h3> User info</h3>
+    <h4>{{ user.username }}</h4>
+        <p>Name: {{ user.first_name }} {{ user.last_name }}</p>
+        <p>Email: {{ user.email }}</p>
+        <p>Phone Number: {{ user.phone_number }}</p>
+
+    <form action="{{ url_for('logout') }}" method="get">
+        <button type="submit">Logout</button>
+    </form>
+</body>
+</html>
