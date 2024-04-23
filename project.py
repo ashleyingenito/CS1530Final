@@ -72,3 +72,13 @@ def logout():
         return render_template("logout_scrn.html")
     else:
         return redirect(url_for("login_controller"))
+    
+@app.route("/challenges")
+def challenges_page():
+    #to be implemented later
+    return render_template("challenges.html")
+
+@app.route("/assessment")
+def assessment_page():
+    #to be implemented later
+    return render_template("assessment.html")
